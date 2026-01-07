@@ -95,7 +95,7 @@
 }
 
 .hero-slider{
-    background: linear-gradient(135deg, #c7d2fe, #e0f2fe);
+    background: #fbfafa;
 }
 .slider-container {
   width: 100%;
@@ -130,7 +130,7 @@
 .dot {
   width: 10px;
   height: 10px;
-  background: #ffffff;
+  background: #dcdcdc;
   border-radius: 50%;
 }
 
