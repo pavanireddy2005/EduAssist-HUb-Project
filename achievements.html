@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>EduAssist Hub | Achievements</title>
+    <link rel="shortcut icon" href="logo.jpeg" />
+    <link rel="stylesheet" href="achievements.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="user-profile">
+          <a href="profile.html">
+            <img src="userlogo.avif" alt="User" />
+          </a>
+          <p class="username">Student</p>
+        </div>
+
+        <div class="brand">
+          <h2>EduAssist</h2>
+        </div>
+
+        <nav class="menu">
+          <a href="dashboard.html"><i class="fas fa-house"></i> Home</a>
+          <a href="#" onclick="openAcademics()"
+            ><i class="fas fa-book"></i> Academics</a
+          >
+          <a href="achievements.html" class="active"
+            ><i class="fas fa-trophy"></i> Achievements</a
+          >
+          <a href="support.html"><i class="fas fa-headset"></i> Support</a>
+          <a><i class="fas fa-robot"></i> Chatbot</a>
+        </nav>
+
+        <div class="logout">
+          <a href="login.html">Logout</a>
+        </div>
+      </aside>
+
+      <!-- MAIN -->
+      <main class="main">
+        <!-- ACHIEVEMENTS WRAPPER (IMPORTANT) -->
+        <section class="achievements-wrapper">
+          <h1 class="achievements-title">Achievements</h1>
+
+          <!-- ROW 1 -->
+          <div class="achievement-row">
+            <div class="achievement-content">
+              <h3>Ananya Reddy</h3>
+              <h4>Software Engineer at Google</h4>
+              <p>
+                Ananya used EduAssist Hub’s academic planning and career
+                guidance to strengthen her fundamentals and crack top
+                product-based interviews.
+              </p>
+            </div>
+
+            <div class="achievement-image">
+              <img src="ach1.jpeg" />
+            </div>
+          </div>
+
+          <!-- ROW 2 -->
+          <div class="achievement-row reverse">
+            <div class="achievement-content">
+              <h3>Rahul Verma</h3>
+              <h4>Data Analyst at Deloitte</h4>
+              <p>
+                Rahul transitioned from a student to a professional data analyst
+                through structured learning paths and mentorship.
+              </p>
+            </div>
+
+            <div class="achievement-image">
+              <img src="ach2.jpeg" />
+            </div>
+          </div>
+
+          <!-- ROW 3 -->
+          <div class="achievement-row">
+            <div class="achievement-content">
+              <h3>Sneha Patel</h3>
+              <h4>UI/UX Designer at Microsoft</h4>
+              <p>
+                Sneha enhanced her design thinking and portfolio using EduAssist
+                Hub’s guided learning paths and career mentorship, leading to
+                her success at Microsoft.
+              </p>
+            </div>
+
+            <div class="achievement-image">
+              <img src="ach3.jpeg" alt="Sneha Patel" />
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      function openAcademics() {
+        const profile = localStorage.getItem("userProfile");
+        console.log("Opening academics for:", profile);
+
+        if (profile === "UG") {
+          window.location.href = "ug.html";
+        } else if (profile === "PG") {
+          window.location.href = "pg.html";
+        } else if (profile === "JOB") {
+          window.location.href = "job.html";
+        } else {
+          alert("Please select a profile first");
+        }
+      }
+    </script>
+  </body>
+</html>

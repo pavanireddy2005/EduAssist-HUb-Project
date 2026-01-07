@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science Notes</title>
+    <link rel="shortcut icon" href="logo.jpeg">
+    <link rel="stylesheet" href="ds.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+</head>
+<body>
+<a class="back-btn" onclick="goBack()">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+<div class="sidebar">
+    <h2>Data Science</h2>
+
+    <input type="text" id="search" placeholder="Search topics...">
+
+    <ul>
+        <li><a href="#intro" data-open="intro">What is Data Science?</a></li>
+        <li><a href="#collect" data-open="collect">Data Collection</a></li>
+        <li><a href="#clean" data-open="clean">Data Cleaning</a></li>
+        <li><a href="#eda" data-open="eda">Exploratory Data Analysis</a></li>
+        <li><a href="#stats" data-open="stats">Statistics</a></li>
+        <li><a href="#ml" data-open="ml">ML for Data Science</a></li>
+        <li><a href="#viz" data-open="viz">Data Visualization</a></li>
+        <li><a href="#bigdata" data-open="bigdata">Big Data</a></li>
+    </ul>
+
+    <button id="toggle">Dark Mode</button>
+</div>
+
+<div class="content">
+
+    <section id="intro" class="block">
+        <button class="title">What is Data Science?</button>
+        <div class="info">
+            <p>Data Science is the field of extracting insights from structured and unstructured data using scientific methods.</p>
+            <ul>
+                <li>Combines statistics, programming, and domain expertise</li>
+                <li>Used for prediction and decision-making</li>
+                <li>Works with large-scale datasets</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="collect" class="block">
+        <button class="title">Data Collection</button>
+        <div class="info">
+            <p>Data Collection is the first step of the Data Science pipeline.</p>
+            <ul>
+                <li>Databases</li>
+                <li>APIs</li>
+                <li>Web scraping</li>
+                <li>Surveys and logs</li>
+                <li>IoT sensor data</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="clean" class="block">
+        <button class="title">Data Cleaning</button>
+        <div class="info">
+            <p>Data Cleaning improves the quality and accuracy of the dataset.</p>
+            <ul>
+                <li>Handling missing values</li>
+                <li>Removing duplicates</li>
+                <li>Outlier detection</li>
+                <li>Normalization & Encoding</li>
+                <li>Fixing incorrect formats</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="eda" class="block">
+        <button class="title">Exploratory Data Analysis</button>
+        <div class="info">
+            <p>EDA helps understand the structure, patterns, and relationships in the data.</p>
+            <ul>
+                <li>Summary statistics</li>
+                <li>Correlation analysis</li>
+                <li>Detecting patterns and anomalies</li>
+                <li>Histograms, scatterplots, heatmaps</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="stats" class="block">
+        <button class="title">Statistics</button>
+        <div class="info">
+            <p>Statistics is the backbone of Data Science for analyzing variation and probability.</p>
+            <ul>
+                <li>Descriptive vs Inferential Statistics</li>
+                <li>Probability distributions</li>
+                <li>Hypothesis testing</li>
+                <li>Correlation & covariance</li>
+                <li>Bayesian concepts</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="ml" class="block">
+        <button class="title">ML for Data Science</button>
+        <div class="info">
+            <p>Machine Learning is used to build predictive and classification models.</p>
+            <ul>
+                <li>Regression models</li>
+                <li>Classification models</li>
+                <li>Clustering algorithms</li>
+                <li>PCA & dimensionality reduction</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="viz" class="block">
+        <button class="title">Data Visualization</button>
+        <div class="info">
+            <p>Visualizing data helps interpret trends and communicate results clearly.</p>
+            <ul>
+                <li>Matplotlib</li>
+                <li>Seaborn</li>
+                <li>Plotly</li>
+                <li>Dashboards (Power BI / Tableau)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="bigdata" class="block">
+        <button class="title">Big Data</button>
+        <div class="info">
+            <p>Big Data tools manage massive datasets that do not fit in normal memory.</p>
+            <ul>
+                <li>Hadoop</li>
+                <li>Spark</li>
+                <li>Hive</li>
+                <li>Kafka</li>
+            </ul>
+        </div>
+    </section>
+
+</div>
+
+<script src="ds.js"></script>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+</body>
+</html>

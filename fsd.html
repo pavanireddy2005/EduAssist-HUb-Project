@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Development Notes</title>
+    <link rel="shortcut icon" href="logo.jpeg">
+    <link rel="stylesheet" href="fsd.css">
+<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+</head>
+<body>
+<a class="back-btn" onclick="goBack()">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+<div class="sidebar">
+    <h2>Full Stack Dev</h2>
+
+    <input type="text" id="search" placeholder="Search topics...">
+
+    <ul>
+        <li><a href="#frontend" data-open="frontend">Frontend Basics</a></li>
+        <li><a href="#html" data-open="html">HTML</a></li>
+        <li><a href="#css" data-open="css">CSS</a></li>
+        <li><a href="#js" data-open="js">JavaScript</a></li>
+        <li><a href="#backend" data-open="backend">Backend Basics</a></li>
+        <li><a href="#node" data-open="node">Node.js</a></li>
+        <li><a href="#db" data-open="db">Databases</a></li>
+        <li><a href="#api" data-open="api">APIs</a></li>
+    </ul>
+</div>
+
+<div class="content">
+
+    <section id="frontend" class="block">
+        <button class="title">Frontend Basics</button>
+        <div class="info">
+            <p>Frontend development handles what users see and interact with.</p>
+            <ul>
+                <li>HTML – Structure</li>
+                <li>CSS – Styling</li>
+                <li>JavaScript – Interaction</li>
+                <li>Responsive Design</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="html" class="block">
+        <button class="title">HTML</button>
+        <div class="info">
+            <p>HTML defines the structure of web pages.</p>
+            <ul>
+                <li>Tags & Elements</li>
+                <li>Forms & Inputs</li>
+                <li>Semantic HTML</li>
+                <li>Links, Images, Videos</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="css" class="block">
+        <button class="title">CSS</button>
+        <div class="info">
+            <p>CSS controls the layout, colors, and design of a webpage.</p>
+            <ul>
+                <li>Selectors & Properties</li>
+                <li>Flexbox & Grid</li>
+                <li>Responsive layouts</li>
+                <li>Animations & Transitions</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="js" class="block">
+        <button class="title">JavaScript</button>
+        <div class="info">
+            <p>JavaScript adds dynamic and interactive behavior to web pages.</p>
+            <ul>
+                <li>Variables & Data types</li>
+                <li>Functions & Events</li>
+                <li>DOM manipulation</li>
+                <li>Fetch API / AJAX</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="backend" class="block">
+        <button class="title">Backend Basics</button>
+        <div class="info">
+            <p>Backend handles server-side logic, APIs, and database operations.</p>
+            <ul>
+                <li>Servers & Routing</li>
+                <li>Authentication</li>
+                <li>Security & Validation</li>
+                <li>Database connections</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="node" class="block">
+        <button class="title">Node.js</button>
+        <div class="info">
+            <p>Node.js is a JavaScript runtime for building scalable backend apps.</p>
+            <ul>
+                <li>NPM packages</li>
+                <li>Express.js</li>
+                <li>REST APIs</li>
+                <li>Middleware</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="db" class="block">
+        <button class="title">Databases</button>
+        <div class="info">
+            <p>Databases store and manage application data.</p>
+            <ul>
+                <li>SQL (MySQL, PostgreSQL)</li>
+                <li>NoSQL (MongoDB)</li>
+                <li>CRUD operations</li>
+                <li>ORM / ODM tools</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="api" class="block">
+        <button class="title">APIs</button>
+        <div class="info">
+            <p>APIs allow communication between client and server.</p>
+            <ul>
+                <li>REST APIs</li>
+                <li>HTTP Methods</li>
+                <li>JSON format</li>
+                <li>API testing with Postman</li>
+            </ul>
+        </div>
+    </section>
+
+</div>
+
+<script src="fsd.js"></script>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+</body>
+</html>

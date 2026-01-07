@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* BODY */
+body {
+  background: linear-gradient(135deg, #fde7f3, #eef3ff, #ffffff);
+  color: #2f2f35;
+  line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+  min-height: 360px;
+  padding: 40px 20px;
+  background:
+    linear-gradient(rgba(253,231,243,0.85), rgba(238,243,255,0.85)),
+    url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.9);
+  color: #4f46e5;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  transform: translateX(-4px);
+  background: #4f46e5;
+  color: #ffffff;
+}
+
+.hero-glass {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(16px);
+  padding: 55px 70px;
+  border-radius: 32px;
+  text-align: center;
+  box-shadow: 0 25px 50px rgba(99,102,241,0.25);
+  animation: fadeUp 0.8s ease;
+}
+
+/* BUTTON */
+.primary-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 36px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f472b6, #818cf8);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(99,102,241,0.4);
+}
+
+/* CONTENT */
+.content {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 24px;
+  display: none;
+  flex-direction: column;
+  gap: 45px;
+}
+
+/* SECTIONS */
+.section {
+  background: rgba(255,255,255,0.9);
+  padding: 40px;
+  border-radius: 28px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.06);
+}
+
+.section.alt {
+  background: rgba(255,255,255,0.82);
+}
+
+/* COMPANIES */
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.company-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90px;
+  padding: 20px;
+  background: linear-gradient(135deg, #fbcfe8, #c7d2fe);
+  border-radius: 18px;
+  text-decoration: none;
+  color: #2f2f35;
+  font-weight: 600;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.company-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(99,102,241,0.25);
+}
+
+/* AI */
+.ai-section {
+  text-align: center;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 100px;
+  padding: 60px 24px;
+  background: linear-gradient(135deg, #fde7f3, #eef3ff);
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  font-size: 28px;
+  color: #6366f1;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ec4899;
+  transform: translateY(-4px) scale(1.1);
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .hero-glass {
+    padding: 35px 24px;
+  }
+
+  .section {
+    padding: 30px;
+  }
+}

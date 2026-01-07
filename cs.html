@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security Notes</title>
+    <link rel="shortcut icon" href="logo.jpeg">
+    <link rel="stylesheet" href="cs.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+</head>
+<body>
+<a class="back-btn" onclick="goBack()">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+<div class="sidebar">
+    <h2>Cyber Security</h2>
+
+    <input type="text" id="search" placeholder="Search topics...">
+
+    <ul>
+        <li><a href="#intro" data-open="intro">Introduction</a></li>
+        <li><a href="#threats" data-open="threats">Cyber Threats</a></li>
+        <li><a href="#attacks" data-open="attacks">Types of Attacks</a></li>
+        <li><a href="#network" data-open="network">Network Security</a></li>
+        <li><a href="#crypt" data-open="crypt">Cryptography</a></li>
+        <li><a href="#tools" data-open="tools">Security Tools</a></li>
+        <li><a href="#policies" data-open="policies">Security Policies</a></li>
+        <li><a href="#best" data-open="best">Best Practices</a></li>
+    </ul>
+</div>
+
+<div class="content">
+
+    <section id="intro" class="block">
+        <button class="title">Introduction to Cyber Security</button>
+        <div class="info">
+            <p>Cyber Security protects systems, networks, and data from digital attacks.</p>
+            <ul>
+                <li>Protects sensitive information</li>
+                <li>Prevents unauthorized access</li>
+                <li>Ensures data integrity and confidentiality</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="threats" class="block">
+        <button class="title">Cyber Threats</button>
+        <div class="info">
+            <p>Threats are potential dangers that can exploit vulnerabilities.</p>
+            <ul>
+                <li>Malware</li>
+                <li>Phishing</li>
+                <li>Ransomware</li>
+                <li>Social engineering</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="attacks" class="block">
+        <button class="title">Types of Cyber Attacks</button>
+        <div class="info">
+            <p>Cyber attacks are deliberate attempts to steal, damage, or disrupt systems.</p>
+            <ul>
+                <li>DDoS Attacks</li>
+                <li>SQL Injection</li>
+                <li>Man-in-the-Middle (MITM)</li>
+                <li>Brute Force</li>
+                <li>Zero-day exploits</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="network" class="block">
+        <button class="title">Network Security</button>
+        <div class="info">
+            <p>Network Security ensures safe data transfer across networks.</p>
+            <ul>
+                <li>Firewalls</li>
+                <li>Intrusion Detection Systems (IDS)</li>
+                <li>Intrusion Prevention Systems (IPS)</li>
+                <li>VPN Encryption</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="crypt" class="block">
+        <button class="title">Cryptography</button>
+        <div class="info">
+            <p>Cryptography protects information by converting it into unreadable format.</p>
+            <ul>
+                <li>Encryption & Decryption</li>
+                <li>Symmetric Algorithms</li>
+                <li>Asymmetric Algorithms</li>
+                <li>Hashing</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="tools" class="block">
+        <button class="title">Security Tools</button>
+        <div class="info">
+            <p>Tools used to monitor and secure systems.</p>
+            <ul>
+                <li>Nmap</li>
+                <li>Wireshark</li>
+                <li>Metasploit</li>
+                <li>Burp Suite</li>
+                <li>OWASP ZAP</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="policies" class="block">
+        <button class="title">Security Policies</button>
+        <div class="info">
+            <p>Security policies guide safe use of systems and data.</p>
+            <ul>
+                <li>Password policy</li>
+                <li>Data privacy policy</li>
+                <li>Incident response plan</li>
+                <li>Access control rules</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="best" class="block">
+        <button class="title">Best Practices</button>
+        <div class="info">
+            <p>Follow recommended practices to stay secure online.</p>
+            <ul>
+                <li>Use strong passwords</li>
+                <li>Enable multi-factor authentication</li>
+                <li>Keep software updated</li>
+                <li>Avoid unknown links & downloads</li>
+            </ul>
+        </div>
+    </section>
+
+</div>
+
+<script src="cs.js"></script>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+</body>
+</html>

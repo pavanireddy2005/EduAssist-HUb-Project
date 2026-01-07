@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Student Profile | EduAssist Hub</title>
+    <link rel="shortcut icon" href="logo.jpeg">
+    <link rel="stylesheet" href="profile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+  </head>
+  <body>
+    <div class="profile-wrapper">
+      <a class="back-btn" onclick="goBack()">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+      <aside class="profile-info">
+        <div class="glass-card">
+          <h1>Student Profile</h1>
+          <p>
+            A calm space to define your academic interests, track your growth,
+            and plan your future with confidence.
+          </p>
+        </div>
+      </aside>
+
+      <main class="profile-form-area">
+        <form class="profile-form">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter your full name" />
+          </div>
+
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="Enter your email" />
+          </div>
+
+          <div class="form-group">
+            <label>Academic Interests</label>
+            <input
+              type="text"
+              placeholder="Web Development, AI, Data Science"
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Career Goals</label>
+            <textarea placeholder="Describe your career goals"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Skill Level</label>
+            <select>
+              <option>Select your level</option>
+              <option>Beginner</option>
+              <option>Intermediate</option>
+              <option>Advanced</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Language Preferences</label>
+            <input type="text" placeholder="English, Telugu" />
+          </div>
+
+          <div class="form-group full">
+            <label>Profile Picture</label>
+            <input type="file" />
+          </div>
+          <button type="button" class="save-btn" onclick="saveProfile()">Save Profile</button>
+          <p id="profileMessage" class="success-msg"></p>
+        </form>
+      </main>
+    </div>
+    <script>
+  const form = document.querySelector(".profile-form");
+  const saveBtn = document.querySelector(".save-btn");
+  const msg = document.getElementById("profileMessage");
+  const inputs = form.querySelectorAll("input, textarea, select");
+
+  // Load saved profile
+  window.onload = () => {
+    const saved = localStorage.getItem("profileSaved");
+    const name = localStorage.getItem("studentName");
+
+    if (name) {
+      document.querySelector(
+        'input[placeholder="Enter your full name"]'
+      ).value = name;
+    }
+
+    if (saved === "true") {
+      lockForm();
+    }
+  };
+
+  function saveProfile() {
+    const name = document.querySelector(
+      'input[placeholder="Enter your full name"]'
+    ).value;
+
+    msg.textContent = "";
+
+    if (!name) {
+      msg.textContent = "Please enter your full name.";
+      msg.className = "error-msg";
+      return;
+    }
+
+    localStorage.setItem("studentName", name);
+    localStorage.setItem("profileSaved", "true");
+
+    msg.textContent = "✅ Profile saved successfully!";
+    msg.className = "success-msg";
+
+    lockForm();
+
+    setTimeout(() => {
+      window.location.href = "dashboard.html";
+    }, 800);
+  }
+
+  function editProfile() {
+    inputs.forEach((input) => (input.disabled = false));
+    saveBtn.textContent = "Save Profile";
+    saveBtn.onclick = saveProfile;
+    msg.textContent = "";
+  }
+
+  function lockForm() {
+    inputs.forEach((input) => (input.disabled = true));
+    saveBtn.textContent = "Edit Profile";
+    saveBtn.onclick = editProfile;
+  }
+
+  function goBack() {
+    window.history.back();
+  }
+</script>
+
+
+  </body>
+</html>

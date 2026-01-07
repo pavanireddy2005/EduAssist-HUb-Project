@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* BACKGROUND */
+body {
+    background: linear-gradient(
+        135deg,
+        #fde7f3,
+        #eef3ff,
+        #ffffff
+    );
+    color: #2f2f35;
+    line-height: 1.6;
+}
+
+/* ================= HERO ================= */
+.hero {
+    min-height: 360px;
+    padding: 40px 20px;
+    background-image:
+        linear-gradient(
+            rgba(253,231,243,0.85),
+            rgba(238,243,255,0.85)
+        ),
+        url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.9);
+  color: #4f46e5;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  transform: translateX(-4px);
+  background: #4f46e5;
+  color: #ffffff;
+}
+
+.hero-glass {
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(16px);
+    padding: 55px 70px;
+    border-radius: 32px;
+    text-align: center;
+    box-shadow: 0 25px 50px rgba(99,102,241,0.25);
+    animation: fadeUp 0.8s ease;
+    max-width: 700px;
+    width: 100%;
+}
+
+.hero-glass h1 {
+    font-size: 42px;
+    margin-bottom: 14px;
+    color: #6366f1; /* fallback */
+
+    background: linear-gradient(90deg, #ec4899, #6366f1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.hero-glass p {
+    font-size: 16px;
+    color: #4b5563;
+    margin-bottom: 22px;
+}
+
+/* ================= BUTTONS ================= */
+.primary-btn {
+    display: inline-block;
+    padding: 14px 34px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #f472b6, #818cf8);
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.35s ease;
+}
+
+.primary-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(99,102,241,0.4);
+}
+
+.secondary-btn {
+    margin-top: 16px;
+    padding: 10px 26px;
+    border-radius: 999px;
+    border: none;
+    background: linear-gradient(135deg, #fbcfe8, #c7d2fe);
+    color: #2f2f35;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.secondary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(236,72,153,0.25);
+}
+
+/* ================= CONTENT ================= */
+.content {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 24px;
+    display: none;
+    flex-direction: column;
+    gap: 45px;
+}
+
+/* ================= SECTIONS ================= */
+.section {
+    background: rgba(255,255,255,0.9);
+    padding: 40px;
+    border-radius: 28px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-6px);
+}
+
+.section.alt {
+    background: rgba(255,255,255,0.82);
+}
+
+.section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #374151;
+}
+
+/* ================= VIDEO + NOTES ================= */
+.video-notes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.video-notes iframe {
+    width: 100%;
+    height: 240px;
+    border-radius: 22px;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.video-notes iframe:hover {
+    transform: scale(1.03);
+}
+
+.notes ul {
+    padding-left: 20px;
+}
+
+.notes li {
+    margin-bottom: 8px;
+}
+/* ================= ROADMAP DROPDOWN ================= */
+
+.roadmap {
+    max-height: 0;
+    overflow: hidden;
+    margin-top: 14px;
+    padding: 0 18px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+    transition:
+        max-height 0.5s ease,
+        padding 0.4s ease,
+        opacity 0.3s ease;
+
+    opacity: 0;
+}
+
+/* Open state */
+.roadmap.open {
+    max-height: 320px;
+    padding: 18px;
+    opacity: 1;
+}
+
+/* Roadmap list styling */
+.roadmap ul {
+    padding-left: 20px;
+}
+
+.roadmap li {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    color: #374151;
+    position: relative;
+}
+
+/* Bullet styling */
+.roadmap li::before {
+    content: "➤ ";
+    color: #6366f1;
+    font-weight: bold;
+}
+
+/* Smooth spacing inside notes */
+.notes .roadmap {
+    margin-top: 16px;
+}
+
+
+/* ================= FOOTER ================= */
+.footer {
+    margin-top: 100px;
+    padding: 60px 24px;
+    background: linear-gradient(135deg, #fde7f3, #eef3ff);
+    text-align: center;
+}
+
+.footer h3 {
+    font-size: 22px;
+    margin-bottom: 24px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    font-size: 28px;
+    color: #6366f1;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ec4899;
+    transform: translateY(-4px) scale(1.1);
+}
+
+.footer-text {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =================================================
+   📱 RESPONSIVE BREAKPOINTS
+================================================= */
+
+/* Tablets */
+@media (max-width: 900px) {
+    .hero-glass {
+        padding: 45px 40px;
+    }
+
+    .hero-glass h1 {
+        font-size: 32px;
+    }
+
+    .video-notes {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 30px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .hero {
+        min-height: 300px;
+    }
+
+    .hero-glass {
+        padding: 35px 24px;
+        border-radius: 24px;
+    }
+
+    .hero-glass h1 {
+        font-size: 26px;
+    }
+
+    .hero-glass p {
+        font-size: 14px;
+    }
+
+    .primary-btn {
+        padding: 12px 26px;
+        font-size: 14px;
+    }
+
+    .section h2 {
+        font-size: 20px;
+    }
+
+    .video-notes iframe {
+        height: 200px;
+    }
+
+    .content {
+        margin: 60px auto;
+        gap: 35px;
+    }
+}

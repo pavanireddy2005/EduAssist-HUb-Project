@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud & DevOps Notes</title>
+    <link rel="shortcut icon" href="logo.jpeg">
+    <link rel="stylesheet" href="cd.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+</head>
+<body>
+<a class="back-btn" onclick="goBack()">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+<div class="sidebar">
+    <h2>Cloud & DevOps</h2>
+
+    <input type="text" id="search" placeholder="Search topics...">
+
+    <ul>
+        <li><a href="#cloud" data-open="cloud">What is Cloud Computing?</a></li>
+        <li><a href="#models" data-open="models">Cloud Service Models</a></li>
+        <li><a href="#deploy" data-open="deploy">Deployment Models</a></li>
+        <li><a href="#aws" data-open="aws">AWS Concepts</a></li>
+        <li><a href="#devops" data-open="devops">What is DevOps?</a></li>
+        <li><a href="#cicd" data-open="cicd">CI/CD Pipeline</a></li>
+        <li><a href="#docker" data-open="docker">Docker & Containers</a></li>
+        <li><a href="#k8" data-open="k8">Kubernetes</a></li>
+    </ul>
+</div>
+
+<div class="content">
+
+    <section id="cloud" class="block">
+        <button class="title">What is Cloud Computing?</button>
+        <div class="info">
+            <p>Cloud computing delivers computing resources (servers, storage, databases) over the internet.</p>
+            <ul>
+                <li>Pay-as-you-go pricing</li>
+                <li>On-demand scalability</li>
+                <li>No physical hardware needed</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="models" class="block">
+        <button class="title">Cloud Service Models (IaaS / PaaS / SaaS)</button>
+        <div class="info">
+            <p>Cloud services are categorized based on the level of control and management.</p>
+            <ul>
+                <li>IaaS – Infrastructure as a Service</li>
+                <li>PaaS – Platform as a Service</li>
+                <li>SaaS – Software as a Service</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="deploy" class="block">
+        <button class="title">Cloud Deployment Models</button>
+        <div class="info">
+            <p>Defines how cloud infrastructure is managed and accessed.</p>
+            <ul>
+                <li>Public Cloud</li>
+                <li>Private Cloud</li>
+                <li>Hybrid Cloud</li>
+                <li>Community Cloud</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="aws" class="block">
+        <button class="title">AWS Basics</button>
+        <div class="info">
+            <p>AWS is the most widely used cloud provider with global infrastructure.</p>
+            <ul>
+                <li>EC2 – Virtual Machines</li>
+                <li>S3 – Object Storage</li>
+                <li>RDS – Managed Databases</li>
+                <li>VPC – Virtual Private Cloud</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="devops" class="block">
+        <button class="title">What is DevOps?</button>
+        <div class="info">
+            <p>DevOps combines development and operations to improve software delivery speed and quality.</p>
+            <ul>
+                <li>Continuous Integration</li>
+                <li>Continuous Testing</li>
+                <li>Continuous Delivery</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="cicd" class="block">
+        <button class="title">CI/CD Pipeline</button>
+        <div class="info">
+            <p>CI/CD automates the build, test, and deployment cycle.</p>
+            <ul>
+                <li>Code → Build → Test → Deploy</li>
+                <li>GitHub Actions / Jenkins</li>
+                <li>Automated environment provisioning</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="docker" class="block">
+        <button class="title">Docker & Containers</button>
+        <div class="info">
+            <p>Docker packages applications into portable containers.</p>
+            <ul>
+                <li>Lightweight and fast</li>
+                <li>Environment consistency</li>
+                <li>Easy deployment</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="k8" class="block">
+        <button class="title">Kubernetes</button>
+        <div class="info">
+            <p>Kubernetes is a container orchestration system for managing clusters.</p>
+            <ul>
+                <li>Auto-scaling</li>
+                <li>Load balancing</li>
+                <li>Self-healing containers</li>
+            </ul>
+        </div>
+    </section>
+
+</div>
+
+<script src="cloud.js"></script>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+</body>
+</html>

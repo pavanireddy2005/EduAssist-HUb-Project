@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Support | EduAssist Hub</title>
+    <link rel="shortcut icon" href="logo.jpeg" />
+    <link rel="stylesheet" href="support.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- ===== SIDEBAR ===== -->
+      <aside class="sidebar">
+        <div class="user-profile">
+          <a href="profile.html">
+            <img src="userlogo.avif" alt="User" />
+          </a>
+          <p class="username">Student</p>
+        </div>
+
+        <div class="brand">
+          <h2>EduAssist</h2>
+        </div>
+
+        <nav class="menu">
+          <a href="dashboard.html"><i class="fas fa-house"></i> Home</a>
+          <a href="#" onclick="openAcademics()"
+            ><i class="fas fa-book"></i> Academics</a
+          >
+          <a href="achievements.html"
+            ><i class="fas fa-trophy"></i> Achievements</a
+          >
+          <a href="support.html" class="active"
+            ><i class="fas fa-headset"></i> Support</a
+          >
+          <a href="chatbot.html"><i class="fas fa-robot"></i> Chatbot</a>
+        </nav>
+
+        <div class="logout">
+          <a href="login.html">Logout</a>
+        </div>
+      </aside>
+
+      <!-- ===== MAIN CONTENT ===== -->
+      <main class="main">
+        <section class="support-header">
+          <h1 class="gradient-heading">Support Center</h1>
+          <p>Need help? Raise a query and our team will assist you.</p>
+        </section>
+
+        <!-- ===== DOUBT SECTION ===== -->
+        <section class="doubt-section">
+          <h2>Ask Your Doubt</h2>
+
+          <form class="doubt-form">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" placeholder="Enter your name" required />
+            </div>
+
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="Enter your email" required />
+            </div>
+
+            <div class="form-group">
+              <label>Category</label>
+              <select required>
+                <option value="">Select category</option>
+                <option>Academics</option>
+                <option>Career</option>
+                <option>Wellness</option>
+                <option>Technical Issue</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Your Query</label>
+              <textarea
+                rows="5"
+                placeholder="Describe your issue..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Query</button>
+          </form>
+        </section>
+      </main>
+    </div>
+    <script>
+      function openAcademics() {
+        const profile = localStorage.getItem("userProfile");
+        console.log("Opening academics for:", profile);
+
+        if (profile === "UG") {
+          window.location.href = "ug.html";
+        } else if (profile === "PG") {
+          window.location.href = "pg.html";
+        } else if (profile === "JOB") {
+          window.location.href = "job.html";
+        } else {
+          alert("Please select a profile first");
+        }
+      }
+    </script>
+  </body>
+</html>

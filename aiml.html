@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIML Notes</title>
+    <link rel="shortcut icon" href="logo.jpeg">
+    <link rel="stylesheet" href="aiml.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+</head>
+<body>
+<a class="back-btn" onclick="goBack()">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+
+<div class="sidebar">
+    <h2>AIML Notes</h2>
+
+    <input type="text" id="search" placeholder="Search topics...">
+
+    <ul>
+        <li><a href="#ai" data-open="ai">Introduction to AI</a></li>
+        <li><a href="#ml" data-open="ml">Machine Learning</a></li>
+        <li><a href="#dl" data-open="dl">Deep Learning</a></li>
+        <li><a href="#nlp" data-open="nlp">NLP</a></li>
+        <li><a href="#cv" data-open="cv">Computer Vision</a></li>
+    </ul>
+</div>
+
+<div class="content">
+
+    <section id="ai" class="block">
+        <button class="title">Introduction to Artificial Intelligence</button>
+        <div class="info">
+            <p>Artificial Intelligence enables machines to perform tasks requiring human-level thinking.</p>
+            <ul>
+                <li>Understanding behavior and decision-making</li>
+                <li>Learning patterns from data</li>
+                <li>Solving real-world automation challenges</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="ml" class="block">
+        <button class="title">Machine Learning</button>
+        <div class="info">
+            <p>Machine Learning builds systems capable of learning from examples instead of explicit programming.</p>
+            <ul>
+                <li>Supervised Learning (Regression, Classification)</li>
+                <li>Unsupervised Learning (Clustering, Dimensionality Reduction)</li>
+                <li>Reinforcement Learning (Agent–Environment interaction)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="dl" class="block">
+        <button class="title">Deep Learning</button>
+        <div class="info">
+            <p>Deep Learning uses multi-layered neural networks to understand complex structures.</p>
+            <ul>
+                <li>Neural Networks with multiple hidden layers</li>
+                <li>CNN for image processing</li>
+                <li>RNN/LSTM for sequential tasks</li>
+                <li>Transformers for language modeling</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="nlp" class="block">
+        <button class="title">Natural Language Processing</button>
+        <div class="info">
+            <p>NLP enables computers to understand, interpret, and generate human language.</p>
+            <ul>
+                <li>Text preprocessing and tokenization</li>
+                <li>Sentiment analysis</li>
+                <li>Named entity recognition</li>
+                <li>Machine translation</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="cv" class="block">
+        <button class="title">Computer Vision</button>
+        <div class="info">
+            <p>Computer Vision enables machines to analyze and interpret visual information.</p>
+            <ul>
+                <li>Image classification</li>
+                <li>Object detection</li>
+                <li>Face recognition</li>
+                <li>Image segmentation</li>
+            </ul>
+        </div>
+    </section>
+
+</div>
+<script src="aiml.js"></script>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Undergraduate Learning | EduAssist Hub</title>
+  <link rel="shortcut icon" href="logo.jpeg">
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="ug.css" />
+</head>
+
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <a class="back-btn" onclick="goBack()">
+    <i class="fa-solid fa-arrow-left"></i>
+  </a>
+
+  <div class="hero-glass">
+    <h1>Undergraduate Learning Hub</h1>
+    <p>
+      Strengthen core subjects, explore certifications, and prepare
+      confidently for internships.
+    </p>
+
+    <a href="#content" class="primary-btn">Start Learning</a>
+  </div>
+</header>
+
+<main class="content" id="content">
+
+  <!-- LEARNING PATH -->
+  <section class="section path">
+    <h2>Recommended Learning Path</h2>
+    <ul>
+      <li>Build strong fundamentals in core engineering subjects</li>
+      <li>Practice SQL and DBMS consistently</li>
+      <li>Understand basic electronics concepts</li>
+      <li>Complete certifications alongside academics</li>
+      <li>Apply for internships via platforms like Internshala</li>
+    </ul>
+  </section>
+
+  <!-- SQL -->
+  <section class="section subject">
+    <h2>SQL (Structured Query Language)</h2>
+
+    <div class="video-notes">
+      <iframe src="https://www.youtube.com/embed/7S_tz1z_5bA" allowfullscreen></iframe>
+
+      <div class="notes">
+        <p><strong>About SQL</strong><br>
+          SQL is used to store, retrieve, and manage data in relational databases.
+        </p>
+
+        <ul>
+          <li>SELECT, INSERT, UPDATE, DELETE</li>
+          <li>JOINS & Subqueries</li>
+          <li>GROUP BY & HAVING</li>
+        </ul>
+
+        <button class="secondary-btn" onclick="toggleRoadmap('sqlRoadmap')">
+          View SQL Roadmap
+        </button>
+
+        <div class="roadmap" id="sqlRoadmap">
+          <ul>
+            <li>Introduction to Databases</li>
+            <li>Basic SQL Queries</li>
+            <li>Joins & Subqueries</li>
+            <li>Indexes & Views</li>
+            <li>Stored Procedures</li>
+            <li>Practice on MySQL / PostgreSQL</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DBMS -->
+  <section class="section subject alt">
+    <h2>DBMS (Database Management Systems)</h2>
+
+    <div class="video-notes">
+      <iframe src="https://www.youtube.com/embed/HXV3zeQKqGY" allowfullscreen></iframe>
+
+      <div class="notes">
+        <p><strong>About DBMS</strong><br>
+          DBMS helps store, organize, and manage large volumes of data.
+        </p>
+
+        <ul>
+          <li>ER Model</li>
+          <li>Normalization</li>
+          <li>Transactions & ACID</li>
+        </ul>
+
+        <button class="secondary-btn" onclick="toggleRoadmap('dbmsRoadmap')">
+          View DBMS Roadmap
+        </button>
+
+        <div class="roadmap" id="dbmsRoadmap">
+          <ul>
+            <li>DBMS Architecture</li>
+            <li>ER Diagrams</li>
+            <li>Normalization Techniques</li>
+            <li>Transactions & ACID Properties</li>
+            <li>Indexing & File Organization</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEEE -->
+  <section class="section subject">
+    <h2>BEEE (Basic Electrical & Electronics Engineering)</h2>
+
+    <div class="video-notes">
+      <iframe src="https://www.youtube.com/embed/1I5ZMmrOfnA" allowfullscreen></iframe>
+
+      <div class="notes">
+        <p><strong>About BEEE</strong><br>
+          BEEE introduces basic electrical and electronic principles.
+        </p>
+
+        <ul>
+          <li>Ohm’s Law</li>
+          <li>AC / DC Circuits</li>
+          <li>Diodes & Transistors</li>
+        </ul>
+
+        <button class="secondary-btn" onclick="toggleRoadmap('beeeRoadmap')">
+          View BEEE Roadmap
+        </button>
+
+        <div class="roadmap" id="beeeRoadmap">
+          <ul>
+            <li>Basic Electrical Laws</li>
+            <li>AC & DC Circuits</li>
+            <li>Transformers</li>
+            <li>Diodes & Transistors</li>
+            <li>Engineering Applications</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- SCRIPTS -->
+<script>
+document.querySelector(".primary-btn").addEventListener("click", function (e) {
+  e.preventDefault();
+  const content = document.querySelector(".content");
+  content.style.display = "flex";
+  content.scrollIntoView({ behavior: "smooth" });
+  this.style.display = "none";
+});
+
+function toggleRoadmap(id) {
+  const roadmap = document.getElementById(id);
+
+  document.querySelectorAll(".roadmap").forEach(r => {
+    if (r.id !== id) r.classList.remove("open");
+  });
+
+  roadmap.classList.toggle("open");
+}
+
+function goBack() {
+  window.history.back();
+}
+</script>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <h3>Connect With Learning Platforms</h3>
+
+  <div class="social-icons">
+    <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://www.hackerrank.com" target="_blank"><i class="fa-brands fa-hackerrank"></i></a>
+    <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+  </div>
+
+  <p class="footer-text">
+    © 2026 EduAssist Hub · Empowering Undergraduate Learners
+  </p>
+</footer>
+
+</body>
+</html>

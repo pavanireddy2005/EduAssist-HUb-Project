@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>EduAssist Hub | Dashboard</title>
+    <link rel="shortcut icon" href="logo.jpeg" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <!-- USER PROFILE -->
+        <div class="user-profile">
+          <a href="profile.html">
+            <img src="userlogo.avif" alt="User" />
+          </a>
+          <p class="username" id="studentName">Student</p>
+        </div>
+
+        <!-- BRAND -->
+        <div class="brand">
+          <h2>EduAssist Hub</h2>
+        </div>
+
+        <!-- MENU -->
+        <nav class="menu">
+          <a href="dashboard.html" class="active"
+            ><i class="fas fa-house"></i> Home</a
+          >
+          <a href="#" onclick="openAcademics()"
+            ><i class="fas fa-book"></i> Academics</a
+          >
+          <a href="achievements.html"
+            ><i class="fas fa-trophy"></i> Achievements</a
+          >
+          <a href="support.html"><i class="fas fa-headset"></i> Support</a>
+          <a href="chatbot.html"><i class="fas fa-robot"></i> Chatbot</a>
+        </nav>
+
+        <!-- LOGOUT -->
+        <div class="logout">
+          <a href="login.html">Logout</a>
+        </div>
+      </aside>
+
+      <!-- MAIN -->
+      <main class="main">
+        <!-- WELCOME -->
+        <section class="welcome">
+          <h1>Welcome to EduAssist Hub 👋</h1>
+          <h2>Please select your profile to continue</h2>
+        </section>
+
+        <!-- PROFILE SELECTION -->
+        <section class="profile-selection">
+          <button class="profile-btn ug" onclick="selectProfile('UG')">
+            Undergraduate (UG)
+          </button>
+          <button class="profile-btn ug" onclick="selectProfile('PG')">
+            Postgraduate (PG)
+          </button>
+          <button class="profile-btn ug" onclick="selectProfile('JOB')">
+            Job Seeker
+          </button>
+        </section>
+        <!-- INFO SECTION -->
+        <section class="home-info">
+          <h3>Why EduAssist Hub?</h3>
+          <p>
+            EduAssist Hub is designed to simplify student life by bringing
+            academics, career guidance, wellness support, and AI assistance into
+            one unified platform. Choose your profile to get personalized
+            resources and support tailored to your journey.
+          </p>
+        </section>
+      </main>
+    </div>
+    <script>
+      function selectProfile(type) {
+        localStorage.setItem("userProfile", type);
+        console.log("Profile saved:", type);
+      }
+
+      function openAcademics() {
+        const profile = localStorage.getItem("userProfile");
+        console.log("Opening academics for:", profile);
+
+        if (profile === "UG") {
+          window.location.href = "ug.html";
+        } else if (profile === "PG") {
+          window.location.href = "pg.html";
+        } else if (profile === "JOB") {
+          window.location.href = "job.html";
+        } else {
+          alert("Please select a profile first");
+        }
+      }
+    </script>
+    <script>
+      if (localStorage.getItem("isLoggedIn") !== "true") {
+        window.location.href = "login.html";
+      }
+    </script>
+    <script>
+      // Redirect user if not logged in
+      if (localStorage.getItem("isLoggedIn") !== "true") {
+        window.location.href = "login.html";
+      }
+
+      function selectProfile(type) {
+        // Save selected profile
+        localStorage.setItem("userProfile", type);
+        console.log("Profile saved:", type);
+
+        // Disable all profile buttons
+        const buttons = document.querySelectorAll(".profile-btn");
+        buttons.forEach((btn) => {
+          btn.disabled = true;
+          btn.style.opacity = "0.6";
+          btn.style.cursor = "not-allowed";
+          btn.textContent = "Selected";
+        });
+
+        // Small delay for UX feedback, then redirect
+        setTimeout(() => {
+          if (type === "UG") {
+            window.location.href = "ug.html";
+          } else if (type === "PG") {
+            window.location.href = "pg.html";
+          } else if (type === "JOB") {
+            window.location.href = "job.html";
+          }
+        }, 500);
+      }
+
+      function openAcademics() {
+        const profile = localStorage.getItem("userProfile");
+
+        if (profile === "UG") {
+          window.location.href = "ug.html";
+        } else if (profile === "PG") {
+          window.location.href = "pg.html";
+        } else if (profile === "JOB") {
+          window.location.href = "job.html";
+        } else {
+          alert("Please select a profile first");
+        }
+      }
+    </script>
+    <script>
+      const name = localStorage.getItem("studentName");
+
+      if (name) {
+        document.getElementById("studentName").textContent = name;
+      }
+    </script>
+  </body>
+</html>

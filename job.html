@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Job Seekers Hub | EduAssist Hub</title>
+  <link rel="shortcut icon" href="logo.jpeg">
+  <link rel="shortcut icon" href="logo.jpeg">
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="job.css" />
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <a class="back-btn" onclick="goBack()">
+        <i class="fa-solid fa-arrow-left"></i>
+    </a>
+    <div class="hero-glass">
+      <h1>Job Seekers Hub</h1>
+      <p>
+        Turn your skills into offers — with the right strategy, strong resume,
+        and smart preparation.
+      </p>
+      <a href="#content" class="primary-btn">Get Job Ready</a>
+    </div>
+  </header>
+
+  <main class="content" id="content">
+
+    <!-- STRATEGY -->
+    <section class="section">
+      <h2>Smart Job Search Strategy</h2>
+      <ul>
+        <li>Shortlist roles you are confident in</li>
+        <li>Prepare role-specific resumes</li>
+        <li>Practice coding & interview questions daily</li>
+        <li>Apply consistently</li>
+        <li>Track applications</li>
+      </ul>
+    </section>
+
+    <!-- COMPANIES -->
+    <section class="section alt">
+      <h2>Companies to Apply For</h2>
+
+      <div class="company-grid">
+        <a class="company-card" href="https://careers.google.com/" target="_blank">Google</a>
+        <a class="company-card" href="https://www.amazon.jobs/en/" target="_blank">Amazon</a>
+        <a class="company-card" href="https://careers.microsoft.com/" target="_blank">Microsoft</a>
+        <a class="company-card" href="https://www.infosys.com/careers.html" target="_blank">Infosys</a>
+        <a class="company-card" href="https://www.tcs.com/careers" target="_blank">TCS</a>
+        <a class="company-card" href="https://www.accenture.com/us-en/careers" target="_blank">Accenture</a>
+        <a class="company-card" href="https://www.deloitte.com/careers" target="_blank">Deloitte</a>
+        <a class="company-card" href="https://www.ibm.com/careers" target="_blank">IBM</a>
+        <a class="company-card" href="https://www.flipkart.com" target="_blank">Flipkart</a>
+        <a class="company-card" href="https://www.zoho.com/careers" target="_blank">Zoho</a>
+      </div>
+    </section>
+
+    <!-- AI -->
+    <section class="section ai-section">
+      <h2>Check Your Resume with AI</h2>
+      <p>Improve keywords, ATS score and interview readiness.</p>
+      <a
+        href="https://gemini.google.com/"
+        target="_blank"
+        class="primary-btn"
+      >
+        Check with Google Gemini AI
+      </a>
+    </section>
+
+  </main>
+
+  <script>
+  document.querySelector(".primary-btn").addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(".content").style.display = "flex";
+    document.querySelector(".content").scrollIntoView({ behavior: "smooth" });
+  });
+  </script>
+
+  <script>
+    const getJobBtn = document.querySelector(".primary-btn");
+    const contentSection = document.querySelector(".content");
+
+    getJobBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      // Show content
+      contentSection.style.display = "flex";
+
+      // Smooth scroll
+      contentSection.scrollIntoView({ behavior: "smooth" });
+
+      // Hide the button
+      getJobBtn.style.display = "none";
+    });
+  </script>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <h3>Connect With Career Platforms</h3>
+
+    <div class="social-icons">
+      <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.hackerrank.com" target="_blank"><i class="fab fa-hackerrank"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    </div>
+
+    <p>© 2026 EduAssist Hub</p>
+  </footer>
+
+</body>
+</html>
