@@ -220,6 +220,59 @@ body {
   color: #4f46e5;
 }
 
+/* ===== CAREER ROLES SLIDE DOWN ===== */
+
+.career-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.career-card {
+  width: 260px;
+  padding: 20px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  overflow: hidden;
+}
+
+/* hover lift */
+.career-card:hover {
+  transform: translateY(-6px);
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+}
+
+.career-card h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* hidden info */
+.career-info {
+  margin-top: 12px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+/* slide down */
+.career-card:hover .career-info {
+  max-height: 140px;
+  opacity: 1;
+}
+
+.career-info p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
 /* ================= AI SECTION ================= */
 .ai-section {
   text-align: center;
