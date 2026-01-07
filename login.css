@@ -175,52 +175,99 @@ body {
   font-weight: 500;
 }
 
-/* WHITE FOOTER */
-.white-footer {
-  width: 100%;
-  padding: 50px 0;
-  margin-top: 80px;
-
-  background: #ffffff; /* solid white */
-  border-top: 1px solid #e5e7eb;
-
-  text-align: center;
+.custom-footer {
+    background: linear-gradient(135deg, #0e1130, #1f233d);
+    color: #eee;
+    padding: 50px 80px;
 }
 
-/* TITLE */
-.white-footer h3 {
-  font-size: 1.6rem;
-  color: #1e3a5f;
-  margin-bottom: 25px;
-  font-weight: 600;
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
 }
 
-/* ICONS */
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 22px;
+/* Columns */
+.footer-column {
+    flex: 1;
+    min-width: 260px;
 }
 
+/* Logo */
+.footer-logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Text */
+.footer-text {
+    max-width: 300px;
+    margin-bottom: 20px;
+    color: #cfd3ff;
+    line-height: 1.5;
+}
+
+/* Social Icons */
 .social-icons a {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-
-  background: #f1f5f9;
-  border: 1px solid #e2e8f0;
-
-  display: flex;
-  align-items: center;
+  display: inline-flex;
   justify-content: center;
-
-  color: #1e3a5f;
-  font-size: 18px;
-  transition: all 0.3s ease;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  font-size: 20px;
+  margin-right: 12px;
+  transition: 0.3s ease;
+  text-decoration: none;
 }
 
+/* Make icons visible */
+.social-icons i {
+  color: white !important;
+  transition: 0.3s ease;
+}
+
+/* Hover effect */
 .social-icons a:hover {
-  background: #4a6cf7;
-  color: #ffffff;
-  transform: translateY(-4px);
+  background: #ffffff;
+  transform: translateY(-6px);
+}
+
+/* Icon color on hover */
+.social-icons a:hover i {
+  color: #000 !important;
+}
+
+.footer-links a {
+    color: #b7bbd8;
+    display: inline-block;
+    margin-right: 15px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Subheadings */
+.footer-sub {
+    color: #a8aeca;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Bottom bar */
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    color: #a0a6c2;
 }
