@@ -4,7 +4,6 @@
   box-sizing: border-box;
   font-family: "Georgia", serif;
 }
-
 /* ===== NAVBAR ===== */
 .navbar {
   width: 100%;
@@ -18,7 +17,7 @@
 .nav-container {
   max-width: 1200px;
   margin: auto;
-  padding: 10px 24px;
+  padding: 14px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -29,27 +28,11 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-}
-
-.logo-name {
-  font-size: 1.3rem;
-  font-weight: 700;
-  text-decoration: none;
-  color: inherit;
-}
-
-.logo-name b {
-  background: linear-gradient(90deg, #2563eb, #16a34a);
-  background-clip: text;
-  color: transparent;
 }
 
 .logo img {
-  width: auto;
-  height: 65px;
+  width: 100%;
+  height: 100px;
   object-fit: contain;
 }
 
@@ -66,42 +49,29 @@
   font-size: 0.95rem;
   color: #1e3a5f;
   font-weight: 500;
-  padding: 10px 16px;
-  border-radius: 8px;
-  background: transparent;
-  display: inline-block;
-  
-  /* Smooth lifting animation */
-  transition: transform 0.3s ease, 
-              background 0.3s ease, 
-              box-shadow 0.3s ease, 
-              color 0.3s ease;
+  transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  transform: translateY(-8px); /* raises ABOVE */
-  background: linear-gradient(135deg, #c7d2fe, #fbcfe8);
-  color: #000;
-  
-  /* Soft shadow like floating */
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  color: #3b82f6;
 }
-
 
 /* LOGIN BUTTON */
 .btn-login {
-  padding: 7px 18px;
+  padding: 8px 18px;
   background: #efac5f;
   border-radius: 20px;
   color: #ffffff;
   font-weight: 600;
-  font-size: 0.95rem;
 }
 
 .btn-login:hover {
   background: #dbeafe;
 }
 
+.hero-slider{
+    background: #fbfafa;
+}
 .slider-container {
   width: 100%;
   padding: 80px;
@@ -135,7 +105,7 @@
 .dot {
   width: 10px;
   height: 10px;
-  background: #ffffff;
+  background: #dcdcdc;
   border-radius: 50%;
 }
 
@@ -186,16 +156,35 @@
   object-fit: cover;
 }
 
-/* PAGE BACKGROUND (important for glass effect) */
-body {
-  background: linear-gradient(135deg, #c7d2fe, #e0f2fe);
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .slide {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .image img {
+    max-height: 260px;
+  }
 }
 
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .about-block,
+  .about-block.reverse {
+    flex-direction: column;
+  }
+
+  .about-image img {
+    height: 260px;
+  }
+}
 .custom-footer {
-    background: linear-gradient(135deg, #0e1130, #161a34);
+    background: linear-gradient(135deg, #0e1130, #1f233d);
     color: #eee;
     padding: 50px 80px;
-    font-family: Arial, sans-serif;
 }
 
 .footer-container {
@@ -228,26 +217,36 @@ body {
 
 /* Social Icons */
 .social-icons a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 42px;
-    height: 42px;
-    margin-right: 10px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.1);
-    color: white;
-    font-size: 18px;
-    transition: 0.3s;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  font-size: 20px;
+  margin-right: 12px;
+  transition: 0.3s ease;
+  text-decoration: none;
 }
 
+/* Make icons visible */
+.social-icons i {
+  color: white !important;
+  transition: 0.3s ease;
+}
+
+/* Hover effect */
 .social-icons a:hover {
-    background: #ffffff;
-    color: #161a34;
-    transform: translateY(-6px);
+  background: #ffffff;
+  transform: translateY(-6px);
 }
 
-/* Footer links */
+/* Icon color on hover */
+.social-icons a:hover i {
+  color: #000 !important;
+}
+
 .footer-links a {
     color: #b7bbd8;
     display: inline-block;
